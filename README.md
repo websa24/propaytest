@@ -17,27 +17,27 @@ A Laravel application with Filament admin panel for managing people and their in
    cd propay
    ```
 
-2. **Install PHP dependencies:**
-   ```bash
-   composer install
-   ```
-   ```bash
-   php artisan filament:install --panels
-   ```
-
-4. **Environment Setup:**
+2. **Environment Setup:**
    ```bash
    cp .env.example .env
+   ```
+    ```bash
+   php artisan key:generate
+   ```
+
+3. **Install PHP dependencies:**
+   ```bash
+   composer install
    ```
 
    Update the `.env` file with your database configuration if needed. This project uses MySQL.
 
-6. **Run Database Migrations:**
+5. **Run Database Migrations:**
    ```bash
    php artisan migrate
    ```
 
-7. **Seed the Database:**
+6. **Seed the Database:**
    ```bash
    php artisan db:seed
    ```
