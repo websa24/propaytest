@@ -1,0 +1,127 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
+
+class InterestSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        $interests = [
+            'Reading',
+            'Writing',
+            'Sports',
+            'Music',
+            'Dancing',
+            'Cooking',
+            'Traveling',
+            'Photography',
+            'Painting',
+            'Drawing',
+            'Singing',
+            'Acting',
+            'Gardening',
+            'Fishing',
+            'Hiking',
+            'Swimming',
+            'Cycling',
+            'Running',
+            'Yoga',
+            'Meditation',
+            'Chess',
+            'Board Games',
+            'Video Games',
+            'Programming',
+            'Coding',
+            'Web Development',
+            'Data Science',
+            'Machine Learning',
+            'Artificial Intelligence',
+            'Robotics',
+            'Astronomy',
+            'Physics',
+            'Chemistry',
+            'Biology',
+            'History',
+            'Geography',
+            'Literature',
+            'Poetry',
+            'Theater',
+            'Cinema',
+            'Film Making',
+            'Animation',
+            'Graphic Design',
+            'Fashion Design',
+            'Architecture',
+            'Engineering',
+            'Mechanics',
+            'Electronics',
+            'Carpentry',
+            'Plumbing',
+            'Cooking',
+            'Baking',
+            'Wine Tasting',
+            'Beer Brewing',
+            'Coffee Roasting',
+            'Tea Making',
+            'Gardening',
+            'Flower Arranging',
+            'Pottery',
+            'Sculpture',
+            'Jewelry Making',
+            'Woodworking',
+            'Metalworking',
+            'Leatherworking',
+            'Sewing',
+            'Knitting',
+            'Crochet',
+            'Embroidery',
+            'Quilting',
+            'Calligraphy',
+            'Painting',
+            'Drawing',
+            'Sketching',
+            'Carving',
+            'Sculpting',
+            'Photography',
+            'Videography',
+            'Editing',
+            'Sound Design',
+            'Music Production',
+            'DJing',
+            'Singing',
+            'Playing Guitar',
+            'Playing Piano',
+            'Playing Drums',
+            'Playing Violin',
+            'Playing Flute',
+            'Dancing',
+            'Ballet',
+            'Hip Hop',
+            'Jazz Dance',
+            'Ballroom Dancing',
+            'Sports',
+            'Football',
+            'Basketball',
+            'Tennis',
+            'Golf',
+            'Baseball',
+            'Soccer',
+            'Cricket',
+        ];
+
+        DB::table('interests')->insert(
+            array_map(fn($name) => [
+                'name' => $name,
+                'created_at' => now(),
+                'updated_at' => now(),
+            ], $interests)
+        );
+    }
+}
